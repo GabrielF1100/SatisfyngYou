@@ -61,7 +61,8 @@ const Home = (props) => {
             <View style={estilos.containerPesquisa}>
                 
                 <Searchbar 
-                    //style={estilos.barraPesquisa}
+                    mode= 'view'
+                    style={estilos.barraPesquisa}
                     inputStyle={estilos.textoPesquisa}
                     placeholder="Insira o termo de busca..."
                     onChangeText={setSearchQuery}
@@ -101,17 +102,26 @@ const estilos = StyleSheet.create({
     containerPesquisa: {
         flex: 2,
         height: '100%',
-        width: '100%',
-        paddingTop: 10,
+        width: '80%',
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: 'black'
     },
+        barraPesquisa: {
+            width: '100%',
+            height: '100%',
+
+        },
+        textoPesquisa: {
+            fontSize: 20,
+            fontFamily: 'AveriaLibre-Regular',
+            color: 'white',
+        },
 
     containerCard: {
         flex: 8,
         height: '100%',
         width: '100%',
-        backgroundColor: 'yellow',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -120,7 +130,6 @@ const estilos = StyleSheet.create({
         flex: 2,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'orange',
         width: '100%',
         height: '100%',
         paddingBottom: 10
@@ -135,25 +144,7 @@ const estilos = StyleSheet.create({
         justifyContent: 'center'
     },
 
-    barraPesquisa: {
-        borderRadius: 0,
-        //flex: 1,
-        width: '90%',
-        height: '60%',
-        alignItems: 'start',
-        justifyContent: 'start',
-        backgroundColor: 'pink'
-    },
-
-    textoPesquisa: {
-        flex: 1,
-        fontSize: 19,
-        fontFamily: 'AveriaLibre-Regular',
-        color: 'white',
-        //paddingBottom: 15,
-        backgroundColor: 'orange',
-        textAlign: 'justify'
-    },
+    
 
     textoNovaPesquisa: {
         fontSize: 19,

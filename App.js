@@ -61,7 +61,9 @@ const App = (props) => {
 
         <View style={estilos.containerBotaoEntrar}>
 
-          <TouchableOpacity style={estilos.buttonSubmit} onPress={() => {props.navigation.navigate("DrawerNavigation")}} >
+          <TouchableOpacity 
+            style={estilos.buttonSubmit} 
+            onPress={() => {props.navigation.navigate("DrawerNavigation")}} >
 
               <Text style={estilos.submitText}>Entrar</Text>
 
@@ -104,7 +106,7 @@ const estilos = StyleSheet.create({
     alignItems: 'center',
     //backgroundColor: 'orange',
     width: '100%',
-    height: '100%',
+    height: '95%',
     paddingHorizontal: 250
     
   },

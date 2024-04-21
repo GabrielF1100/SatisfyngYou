@@ -1,4 +1,4 @@
-import { TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -13,11 +13,11 @@ const DrawerNavigation = (props) => {
     return (
             <Drawer.Navigator screenOptions={
                 {drawerStyle: { 
-                    backgroundColor: '2B1F5C' 
+                    backgroundColor: '#2B1D62' 
                 },
 
                 headerStyle:{ 
-                    backgroundColor: '#C1E7E3' 
+                    backgroundColor: '#2B1D62' 
                 }, 
                 headerLeft: () =>{
                     
@@ -30,19 +30,19 @@ const DrawerNavigation = (props) => {
                     return (
 
                         <TouchableOpacity onPress={() => openMenu()}>
-                            <Icon name='bars' color='white'/>
+                            <Icon name='bars' color='white' size={20} style={estilos.iconeMenu}/>
                         </TouchableOpacity>
                     );
                 },
 
                 headerTitleStyle: {
-                    color: '#419ED7',
+                    color: 'white',
                     fontSize: 28,
-                    fontFamily: 'AveriaLibre-Regular',
+                    fontFamily: 'AveriaLibre-Regular'
                 }, 
                 drawerLabelStyle:{
                     fontFamily: 'AveriaLibre-Regular',
-                    color: '#419ED7',
+                    color: 'white',
                     fontSize: 18
                 }
                 }}
@@ -56,5 +56,11 @@ const DrawerNavigation = (props) => {
             </Drawer.Navigator>
     )
 }
+
+const estilos = StyleSheet.create({
+    iconeMenu: {
+        paddingHorizontal: 10
+    }
+})
 
 export default DrawerNavigation
